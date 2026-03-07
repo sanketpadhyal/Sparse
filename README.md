@@ -1,81 +1,17 @@
-# Minimal Social
+Hey everyone 👋
 
-Minimal Social is a distraction-free social media platform designed for mature users who want meaningful interaction without addictive algorithms.
+Thanks for checking out **Minimal Social** and showing interest in the project.
 
-The platform focuses on simplicity, calm design, and intentional interaction. Instead of endless scrolling and algorithm-driven content, Minimal Social prioritizes chronological feeds and simple communication.
+We just want to let you know that **we are actively working on it**. The platform is currently in the **early development (MVP) stage**, and we are continuously building, improving the UI, and refining the core experience.
 
-## Philosophy
+Our goal is to create a **calm, distraction-free social platform** where people can interact without addictive algorithms, endless scrolling, or attention-hijacking features.
 
-Most modern social platforms optimize for attention and screen time.
-Minimal Social takes the opposite approach.
+So if some things feel incomplete or still evolving, that’s expected right now — we’re building it step by step.
 
-The goal is simple:
+More features, improvements, and updates are coming soon as we continue development.
 
-* meaningful interaction
-* chronological content
-* minimal interface
-* user control over attention
+We truly appreciate the support and feedback from everyone following the project 🙌
 
-No dopamine traps.
-No endless recommendation loops.
-Just people, posts, and conversations.
+Stay tuned — **Minimal Social is getting better every day.**
 
-## Features
-
-* Email and password authentication
-* Continue with Google
-* Continue with Facebook
-* Minimal dark UI
-* Chronological feed
-* Basic posts (text + images)
-* Stories
-* Simple chat system
-* Follow system
-
-## What You Will NOT Find Here
-
-* No reels
-* No addictive recommendation algorithms
-* No endless content discovery
-* No attention-hijacking design patterns
-
-## Tech Stack
-
-Frontend
-
-* React
-* Modern JavaScript (ES6+)
-* CSS
-
-Backend / Authentication
-
-* Firebase Authentication
-
-Database
-
-* Firebase Firestore
-
-Media Storage
-
-* Supabase
-
-Deployment
-
-* Netlify
-
-
-
-## Status
-
-Early development (MVP stage).
-
-## Contributors
-
-* https://github.com/sanketpadhyal
-* https://github.com/bhaveshpatil4251-wq
-
-## Author
-
-Sanket Padhyal and
-Bhavesh Patil
-Computer Science student and builder passionate about creating useful software.
+– Sanket Padhyal & Bhavesh Patil
