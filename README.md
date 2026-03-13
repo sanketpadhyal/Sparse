@@ -41,6 +41,12 @@ Create an account and connect with me — **@sanket**
 - Typing indicator
 - Chat deletion system
 
+### 🖼 Chat Media Support
+- Image sharing in chats
+- No file size limits for chat images
+- Optimized image loading
+- Skeleton loaders for images while loading
+
 ---
 
 ### 👥 Social System
@@ -71,6 +77,8 @@ Supported roles:
 - Story ring around profile avatars
 - Story preview system
 - Expiration-based story visibility
+- Image stories supported
+- Optimized using Firebase Storage
 
 ---
 
@@ -114,6 +122,29 @@ To maintain performance and prevent infinite scrolling:
 - Meme feed usage is limited to **1 hour per day**
 - Time usage is tracked per user
 - Automatically resets every day
+
+---
+
+# 🆕 Latest Updates
+
+Recent improvements and optimizations added to Sparse:
+
+1. **Profile Photos**
+   - No size limits for profile photos.
+
+2. **Stories System**
+   - Stories now support image uploads.
+   - Images stored using **Firebase Storage**.
+   - Optimized loading for faster story viewing.
+
+3. **Chat System**
+   - Chats now support image messages.
+   - No size limits for images.
+   - Optimized loading with skeleton placeholders.
+
+4. **Bug Fixes**
+   - Fixed grid layout issues.
+   - Various performance optimizations applied.
 
 ---
 
@@ -166,7 +197,7 @@ Sparse uses multiple caching layers:
 - Firebase (Authentication, users, followers, stories)
 
 ### Database
-- PostgreSQL (Supabase) → chat messages & realtime subscriptions
+- PostgreSQL (Supabase) → chat messages & realtime subscriptions  
 - Firestore (Firebase) → user data, profiles, stories, meme usage tracking
 
 ### AI System
@@ -213,8 +244,8 @@ You are free to study the code and experiment with the project.
 GitHub: **@sanketpadhyal**  
 Sparse Username: **@sanket**
 
-Bhavesh Patil  
-GitHub: **@bhaveshpatil4251-wq**
+**Bhavesh Patil**  
+GitHub: **@bhaveshpatil4251-wq**  
 Sparse Username: **@kaii**
 
 ---
