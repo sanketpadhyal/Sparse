@@ -25,6 +25,8 @@ The platform combines messaging, stories, discovery features, and an AI assistan
 Visit the live app:  
 **https://www.sparse.in**
 
+Create an account and connect with me — **@sanket**
+
 ---
 
 # ✨ Core Features
@@ -208,11 +210,13 @@ You are free to study the code and experiment with the project.
 # 👨‍💻 Developers
 
 **Sanket Padhyal**  
-GitHub: **@sanketpadhyal**
+GitHub: **@sanketpadhyal**  
+Sparse Username: **@sanket**
 
-**Bhavesh Patil**
-Github: **@bhaveshpatil4251-wq**
- 
+Bhavesh Patil  
+GitHub: **@bhaveshpatil4251-wq**
+Sparse Username: **@kaii**
+
 ---
 
 ### 📅 Project Information
