@@ -29,7 +29,44 @@ Create an account and connect with me — **@sanket**
 
 ---
 
-# ✨ Core Features
+
+# 🔔 Notifications System
+
+Sparse includes a smart **real-time notifications system**.
+
+Users receive notifications for:
+
+1. **Chats**
+   - new message alerts
+   - message reactions
+   - reply notifications
+
+2. **Stories**
+   - story interactions
+   - story replies
+
+3. **Post Activity**
+   - post likes
+   - post comments
+
+4. **Profile Updates**
+   - profile bio updates
+   - profile photo changes
+   - status updates
+
+### Notification Safety Algorithm
+
+To improve security and reduce suspicious activity, Sparse uses a small device-based algorithm.
+
+Notifications will only work on the **device where the account was last logged in**.
+
+This helps prevent:
+
+- unauthorized login monitoring
+- suspicious background activity
+- notification spam across unknown devices
+
+The system ensures a **safe and controlled notification environment** for users.
 
 ---
 
@@ -181,7 +218,16 @@ Features include:
 
 - available directly inside chats
 - behaves like chatting with a normal user
-- powered by **Odoy servers (odoy.in)**
+- powered by **Odoy servers**
+
+### Infrastructure
+
+The **Odoy AI backend servers are now deployed on Google Cloud**, allowing:
+
+- improved scalability
+- faster AI responses
+- better uptime
+- secure backend infrastructure
 
 ---
 
@@ -233,7 +279,14 @@ Recent improvements added to Sparse:
    - Chat images supported.
    - Optimized loading with skeleton placeholders.
 
-5. **Bug Fixes**
+5. **Notifications System**
+   - Notifications for chats, stories, posts and profile updates.
+   - Device-based safety algorithm added.
+
+6. **Infrastructure Upgrade**
+   - Odoy AI backend servers deployed on Google Cloud.
+
+7. **Bug Fixes**
    - Fixed layout issues.
    - Performance improvements applied.
 
@@ -300,7 +353,7 @@ Sparse uses multiple caching layers.
 
 ### AI System
 
-- Odoy AI powered by **odoy.in servers**
+- Odoy AI backend deployed on **Google Cloud**
 
 ### Content System
 
