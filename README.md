@@ -29,6 +29,51 @@ Create an account and connect with me — **@sanket**
 
 ---
 
+# 📊 Activity & Engagement System (NEW)
+
+Sparse now includes a **comprehensive activity tracking system** that shows everything happening around the user in real-time.
+
+### 📌 Activity Page Features
+
+Users can track:
+
+- 🔐 **Login Activity**
+  - recent login sessions
+  - security awareness
+
+- 👥 **Followers Activity**
+  - when someone follows you
+
+- 🔁 **Following Activity**
+  - when you follow someone  
+  - story updates from following users  
+  - profile updates  
+
+- 📝 **Post Updates Feed**
+  - new posts from people you follow  
+  - real-time updates  
+
+- ❤️ **Engagement Notifications**
+  - likes on your posts  
+  - comments on your posts  
+
+---
+
+### ⚡ Real-Time Sync
+
+- instant updates  
+- cross-session sync  
+- optimized loading  
+
+---
+
+### 🎯 Purpose
+
+- increase user engagement  
+- improve retention  
+- full visibility of social activity  
+
+---
 
 # 🔔 Notifications System
 
