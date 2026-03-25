@@ -329,38 +329,52 @@ Sparse: @kaii
 
 ---
 
-# 🧭 Our Journey
+# ☁️ Release Updates
 
 Sparse started as a simple idea and quickly evolved into a fully working real-time social platform.
 
 ### 🚀 Timeline
 
-* **📅 6 March 2026**  
-  → Sparse repository created  
+* **📅 6 March 2026**
 
-* **📅 13 March 2026**  
-  → First prototype launched  
+  1. Sparse repository created
 
-* **📅 14 March 2026**  
-  → Initial public release  
-  → 🎉 Gained first **40+ users**  
+* **📅 13 March 2026**
 
-* **📅 16 March 2026**  
-  → Major bug fixes & feature improvements  
-  → Core system stabilized  
+  1. First prototype launched
 
-* **📅 18 March 2026**  
-  → ✅ Sparse Stable Version released  
+* **📅 14 March 2026**
 
-* **📅 24 March 2026 (NEW 🔥)**  
-  → 🔔 Notifications bug fixed  
-  → 🎥 Stories support short videos (30s)  
-  → 🎨 Story templates fixed  
-  → 🌗 Full light/dark theme system added  
-  → 🎛 Owner Panel system introduced  
-  → 🔐 Role security system implemented  
+  1. Initial public release
+  2. 🎉 Gained first **40+ users**
+
+* **📅 16 March 2026**
+
+  1. Major bug fixes & feature improvements
+  2. Core system stabilized
+
+* **📅 18 March 2026**
+
+  1. ✅ Sparse Stable Version released
+
+* **📅 24 March 2026**
+
+  1. 🔔 Notifications bug fixed
+  2. 🎥 Stories support short videos (up to 30 seconds)
+  3. 🎨 Story templates fixed
+  4. 🌗 Full light/dark theme system added
+  5. 🎛 Owner Panel system introduced
+  6. 🔐 Role security system implemented
+
+* **📅 25 March 2026 (NEW 🔥)**
+
+  1. 🤖 Added **Odoy AI caption generator** in post creation (ultra-fast ~1s latency)
+  2. 🧠 Integrated AI bio generator in **Edit Profile**
+  3. 📂 Introduced **Stories Archive** (view & re-upload expired stories)
+  4. ⚡ Performance improvements and minor bug fixes (web optimized)
 
 ---
+
 
 ### 🔥 Current State
 
