@@ -366,12 +366,20 @@ Sparse started as a simple idea and quickly evolved into a fully working real-ti
   5. 🎛 Owner Panel system introduced
   6. 🔐 Role security system implemented
 
-* **📅 25 March 2026 (NEW 🔥)**
+* **📅 25 March 2026**
 
   1. 🤖 Added **Odoy AI caption generator** in post creation (ultra-fast ~1s latency)
   2. 🧠 Integrated AI bio generator in **Edit Profile**
   3. 📂 Introduced **Stories Archive** (view & re-upload expired stories)
   4. ⚡ Performance improvements and minor bug fixes (web optimized)
+
+* **📅 26 March 2026 (NEW 🔥)**
+
+  1. 💬 Fixed chatroom bugs and improved overall message stability  
+  2. ⚡ Chats page is now dynamic with live typing indicators and unread count updates  
+  3. 🧩 Profile page skeleton loading bug fixed  
+  4. ✏️ Edit profile optimized — faster and smoother saving experience  
+  5. 🚀 Follow system significantly improved (from ~8s → ~1s response time)
 
 ---
 
