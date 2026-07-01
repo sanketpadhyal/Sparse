@@ -10,6 +10,9 @@
 > Sparse is now running smoothly with optimized performance and core systems fully stable.  
 > 🚧 Continuous improvements and new features are actively in development.
 
+> [!NOTE]
+> Sparse Users Try Mimi Project Which is Pinned.
+
 ---
 
 Sparse is a modern real-time social platform built for **fast communication, social discovery, and a seamless mobile experience**.
