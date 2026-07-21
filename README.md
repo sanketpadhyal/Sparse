@@ -247,7 +247,3 @@ npm run build
 This project is licensed under the **MIT License** - feel free to fork, modify, and build upon it!
 
 ---
-
-<p align="center">
-  <b>⭐ If you like this project, consider giving it a star on GitHub! ⭐</b>
-</p>
