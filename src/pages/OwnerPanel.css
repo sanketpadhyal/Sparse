@@ -1,0 +1,42 @@
+.fade-in{
+animation:fadeIn .35s ease forwards;
+will-change:opacity, transform;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(8px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+.avatar{
+width:36px;
+height:36px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.small{
+max-width:120px;
+}
+
+.smooth{
+transition:transform .18s ease, box-shadow .18s ease;
+}
+
+
+.clear-btn{
+background:none;
+border:none;
+color:#888;
+cursor:pointer;
+margin-left:auto;
+font-size:14px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+
+.muted{
+color:#888;
+}

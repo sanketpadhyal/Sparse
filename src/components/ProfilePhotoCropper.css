@@ -1,0 +1,240 @@
+.cropper-overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.9);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:99999;
+backdrop-filter:blur(10px);
+padding:20px;
+}
+
+
+
+.cropper-modal{
+width:100%;
+max-width:420px;
+background:#0c0c0c;
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.08);
+overflow:hidden;
+box-shadow:0 25px 80px rgba(0,0,0,0.85);
+animation:cropperEnter .25s ease;
+display:flex;
+flex-direction:column;
+}
+
+@keyframes cropperEnter{
+from{
+opacity:0;
+transform:scale(.94);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+
+
+.cropper-header{
+padding:18px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,0.06);
+flex-shrink:0;
+}
+
+.cropper-header h3{
+margin:0;
+font-size:16px;
+font-weight:600;
+color:white;
+}
+
+.cropper-header p{
+margin-top:4px;
+font-size:12px;
+color:#9a9a9a;
+}
+
+
+
+.cropper-area{
+position:relative;
+width:100%;
+padding-top:100%;
+background:#111;
+overflow:hidden;
+}
+
+
+
+.cropper-area > div{
+position:absolute !important;
+inset:0;
+}
+
+
+
+.cropper-controls{
+padding:18px;
+display:flex;
+flex-direction:column;
+gap:16px;
+flex-shrink:0;
+}
+
+
+
+.zoom-control{
+display:flex;
+flex-direction:column;
+gap:6px;
+}
+
+.zoom-control label{
+font-size:12px;
+color:#bdbdbd;
+}
+
+.zoom-control input{
+width:100%;
+appearance:none;
+height:5px;
+background:#2a2a2a;
+border-radius:10px;
+outline:none;
+}
+
+.zoom-control input::-webkit-slider-thumb{
+appearance:none;
+width:16px;
+height:16px;
+border-radius:50%;
+background:white;
+cursor:pointer;
+}
+
+
+
+.cropper-buttons{
+display:flex;
+gap:10px;
+}
+
+.cropper-buttons button{
+flex:1;
+padding:11px;
+border-radius:9px;
+font-size:13px;
+font-weight:600;
+cursor:pointer;
+transition:.2s;
+border:none;
+}
+
+.cancel-btn{
+background:#1a1a1a;
+color:white;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+
+.select-btn{
+background:white;
+color:black;
+}
+
+
+.select-btn:disabled{
+opacity:.6;
+cursor:not-allowed;
+}
+
+
+
+@media (max-width:480px){
+
+.cropper-overlay{
+padding:14px;
+}
+
+.cropper-header h3{
+font-size:15px;
+}
+
+.cropper-controls{
+padding:14px;
+}
+
+}
+
+@media (prefers-color-scheme: light){
+
+	
+	.cropper-overlay{
+		background:rgba(255,255,255,0.85);
+		backdrop-filter:blur(10px);
+	}
+
+	
+	.cropper-modal{
+		background:#ffffff;
+		border:1px solid rgba(0,0,0,0.08);
+		box-shadow:0 20px 60px rgba(0,0,0,0.12);
+	}
+
+	
+	.cropper-header{
+		border-bottom:1px solid rgba(0,0,0,0.08);
+	}
+
+	.cropper-header h3{
+		color:#000;
+	}
+
+	.cropper-header p{
+		color:#666;
+	}
+
+	
+	.cropper-area{
+		background:#f5f5f5;
+	}
+
+	
+	.zoom-control label{
+		color:#555;
+	}
+
+	
+	.zoom-control input{
+		background:#ddd;
+	}
+
+	
+	.zoom-control input::-webkit-slider-thumb{
+		background:#000;
+	}
+
+	
+
+	.cancel-btn{
+		background:#f5f5f5;
+		color:#000;
+		border:1px solid rgba(0,0,0,0.1);
+	}
+
+
+	.select-btn{
+		background:#000;
+		color:#fff;
+	}
+
+
+	.select-btn:disabled{
+		opacity:.5;
+	}
+
+}

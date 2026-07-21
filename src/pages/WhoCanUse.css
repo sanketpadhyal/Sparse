@@ -1,0 +1,217 @@
+.who{
+width:92%;
+max-width:1200px;
+margin:140px auto;
+color:white;
+opacity:0;
+transform:translateY(20px);
+animation:pageEnter .8s ease forwards;
+}
+
+@keyframes pageEnter{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.who-container{
+text-align:center;
+}
+
+
+
+.who-badge{
+display:inline-block;
+font-size:12px;
+letter-spacing:.6px;
+text-transform:uppercase;
+color:#9c9c9c;
+border:1px solid rgba(255,255,255,0.15);
+padding:6px 12px;
+border-radius:20px;
+margin-bottom:18px;
+background:rgba(255,255,255,0.03);
+}
+
+
+
+.who-title{
+font-size:40px;
+font-weight:600;
+margin-bottom:16px;
+line-height:1.2;
+}
+
+
+
+.who-desc{
+max-width:700px;
+margin:0 auto 60px auto;
+color:#9c9c9c;
+font-size:18px;
+line-height:1.7;
+}
+
+
+
+.who-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
+}
+
+
+
+.who-card{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:14px;
+padding:26px;
+text-align:left;
+transition:all .28s ease;
+position:relative;
+overflow:hidden;
+}
+
+
+
+.who-icon{
+width:36px;
+height:36px;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:12px;
+}
+
+
+
+.good-icon{
+background:rgba(0,255,120,0.08);
+border:1px solid rgba(0,255,120,0.25);
+color:#00e676;
+}
+
+
+
+.bad-icon{
+background:rgba(255,70,70,0.08);
+border:1px solid rgba(255,70,70,0.25);
+color:#ff5252;
+}
+
+
+
+.who-card h4{
+margin:6px 0 8px 0;
+font-size:16px;
+font-weight:600;
+}
+
+
+
+.who-card p{
+font-size:13.5px;
+color:#9c9c9c;
+line-height:1.6;
+}
+
+
+
+
+
+
+@media (max-width:900px){
+
+.who-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.who-title{
+font-size:32px;
+}
+
+}
+
+
+
+@media (max-width:480px){
+
+.who{
+margin:90px auto;
+}
+
+.who-title{
+font-size:26px;
+}
+
+.who-desc{
+font-size:15px;
+margin-bottom:40px;
+}
+
+.who-grid{
+grid-template-columns:1fr;
+gap:16px;
+}
+
+.who-card{
+padding:20px;
+}
+
+}
+
+@media (prefers-color-scheme: light){
+
+	.who{
+		color:#111;
+	}
+
+	
+	.who-badge{
+		color:#555;
+		border:1px solid rgba(0,0,0,0.1);
+		background:#ffffff;
+	}
+
+	
+	.who-title{
+		color:#000;
+	}
+
+	.who-desc{
+		color:#555;
+	}
+
+	
+	.who-card{
+		background:#ffffff;
+		border:1px solid rgba(0,0,0,0.08);
+		box-shadow:0 6px 18px rgba(0,0,0,0.05);
+	}
+
+
+	.who-card h4{
+		color:#111;
+	}
+
+	.who-card p{
+		color:#666;
+	}
+
+	
+	.good-icon{
+		background:rgba(22,163,74,0.1);
+		border:1px solid rgba(22,163,74,0.25);
+		color:#16a34a;
+	}
+
+	.bad-icon{
+		background:rgba(220,38,38,0.1);
+		border:1px solid rgba(220,38,38,0.25);
+		color:#dc2626;
+	}
+
+}

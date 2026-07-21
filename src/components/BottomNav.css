@@ -1,0 +1,192 @@
+
+:root{
+	--bg:#000;
+	--text:#fff;
+	--muted:#8a8a8a;
+	--border:rgba(255,255,255,0.08);
+	--hover:rgba(255,255,255,0.06);
+}
+
+[data-theme="light"]{
+	--bg:#fff;
+	--text:#000;
+	--muted:#6b6b6b;
+	--border:rgba(0,0,0,0.08);
+	--hover:rgba(0,0,0,0.06);
+}
+
+*{
+	transition: background 0.2s ease, color 0.2s ease, border 0.2s ease;
+}
+
+.bottom-nav{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+
+height:64px;
+
+display:flex;
+align-items:center;
+justify-content:space-around;
+
+background:var(--bg);
+
+border-top:1px solid var(--border);
+
+z-index:1000;
+
+padding-bottom:env(safe-area-inset-bottom);
+}
+
+
+
+.nav-btn{
+flex:1;
+height:100%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+color:var(--muted);
+
+cursor:pointer;
+
+user-select:none;
+-webkit-user-select:none;
+
+-webkit-tap-highlight-color:transparent;
+-webkit-touch-callout:none;
+
+touch-action:manipulation;
+
+}
+
+
+
+
+.nav-btn svg{
+pointer-events:none;
+width:22px;
+height:22px;
+}
+
+
+
+.nav-btn.active{
+color:var(--text);
+}
+
+
+
+.sidebar-nav{
+position:fixed;
+top:0;
+left:0;
+
+height:100vh;
+width:220px;
+
+display:flex;
+flex-direction:column;
+
+align-items:center;
+justify-content:center;
+
+gap:10px;
+
+background:var(--bg);
+
+border-right:1px solid var(--border);
+
+z-index:1000;
+}
+
+
+
+.side-btn{
+width:180px;
+
+display:flex;
+align-items:center;
+justify-content:flex-start;
+
+gap:12px;
+
+padding:14px 18px;
+
+background:none;
+border:none;
+
+color:var(--muted);
+
+cursor:pointer;
+
+font-size:14px;
+
+border-radius:10px;
+
+}
+
+
+
+.side-btn.active{
+color:var(--text);
+background:var(--hover);
+}
+
+
+
+.side-btn svg{
+pointer-events:none;
+}
+
+
+
+@media (min-width:768px){
+
+.bottom-nav{
+display:none;
+}
+
+
+}
+
+
+
+@media (max-width:767px){
+
+.sidebar-nav{
+display:none;
+}
+
+}
+
+
+
+.nav-profile{
+width:24px;
+height:24px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid transparent;
+}
+
+.nav-profile-active{
+border:1px solid var(--text);
+}
+
+.nav-sparks{
+width:22px;
+height:22px;
+object-fit:contain;
+}
+
+.side-sparks{
+width:22px;
+height:22px;
+object-fit:contain;
+}
+

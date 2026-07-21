@@ -1,0 +1,288 @@
+.activity-header-title{
+	font-size:26px;
+	letter-spacing:.3px;
+}
+
+.activity-title-strong{
+	font-weight:800;
+	color:#ffffff;
+}
+
+.activity-title-light{
+	font-weight:500;
+	color:#d6d6d6;
+	margin-left:2px;
+}
+
+.activity-page{
+	min-height:100vh;
+	display:flex;
+	flex-direction:column;
+	padding-bottom:90px;
+	background:#000;
+}
+
+.activity-header{
+	width:100%;
+	max-width:720px;
+	margin:0 auto;
+	padding:14px 16px 6px 16px;
+}
+
+.activity-header-title{
+	font-size:24px;
+	font-weight:700;
+	color:white;
+	letter-spacing:.3px;
+}
+
+.activity-feed{
+	width:100%;
+	max-width:720px;
+	margin:0 auto;
+	display:flex;
+	flex-direction:column;
+	gap:12px;
+	padding:10px 14px;
+}
+
+.activity-card{
+	width:100%;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	padding:14px;
+	border-radius:16px;
+	background:linear-gradient(180deg,#161616,#0e0e0e);
+	border:1px solid rgba(255,255,255,0.06);
+	transition:.25s;
+}
+
+
+.activity-card-follow{
+	background:linear-gradient(180deg,#3a2b09,#1a1405);
+	border:1px solid rgba(255,215,120,.4);
+}
+
+.activity-card-left{
+	display:flex;
+	align-items:center;
+	gap:14px;
+	flex:1;
+	min-width:0;
+}
+
+.activity-icon{
+	width:42px;
+	height:42px;
+	border-radius:50%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	background:rgba(255,255,255,.05);
+	border:1px solid rgba(255,255,255,.1);
+	color:white;
+	font-size:14px;
+	flex-shrink:0;
+}
+
+.activity-avatar-wrap{
+	position:relative;
+	width:42px;
+	height:42px;
+	flex-shrink:0;
+}
+
+.activity-avatar{
+	width:42px;
+	height:42px;
+	border-radius:50%;
+	object-fit:cover;
+	border:1px solid rgba(255,255,255,.15);
+	cursor:pointer;
+	transition:.25s;
+}
+
+
+.activity-avatar-skeleton{
+	width:42px;
+	height:42px;
+	border-radius:50%;
+	background:linear-gradient(90deg,#222 25%,#333 37%,#222 63%);
+	background-size:400%;
+	animation:activitySkeleton 1.3s ease infinite;
+}
+
+@keyframes activitySkeleton{
+	0%{background-position:100%}
+	100%{background-position:-100%}
+}
+
+.activity-content{
+	display:flex;
+	flex-direction:column;
+	min-width:0;
+}
+
+.activity-text{
+	font-size:14px;
+	font-weight:500;
+	color:#f1f1f1;
+}
+
+.activity-caption{
+	font-size:12px;
+	margin-top:2px;
+	font-style:italic;
+	color:#cfcfcf;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	max-width:320px;
+}
+
+.activity-time{
+	font-size:11px;
+	margin-top:4px;
+	color:#8a8a8a;
+}
+
+.activity-delete{
+	background:none;
+	border:none;
+	cursor:pointer;
+	width:30px;
+	height:30px;
+	border-radius:8px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	color:#888;
+	transition:.2s;
+}
+
+
+.activity-empty{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	margin-top:120px;
+	color:#777;
+	gap:10px;
+}
+
+.activity-empty-title{
+	font-size:20px;
+	font-weight:600;
+	color:#ddd;
+}
+
+.activity-empty-desc{
+	font-size:14px;
+	opacity:.7;
+	max-width:260px;
+}
+
+.activity-loader{
+	width:100%;
+	max-width:720px;
+	margin:0 auto;
+	padding:20px;
+	display:flex;
+	flex-direction:column;
+	gap:12px;
+}
+
+.activity-card-skeleton{
+	height:72px;
+	border-radius:14px;
+	background:linear-gradient(90deg,#1b1b1b 25%,#242424 37%,#1b1b1b 63%);
+	background-size:400%;
+	animation:activitySkeleton 1.3s ease infinite;
+}
+
+
+
+@media (prefers-color-scheme: light){
+
+	.activity-page{
+		background:#ffffff;
+	}
+
+	.activity-header-title{
+		color:#000;
+	}
+
+	.activity-title-strong{
+		color:#000;
+	}
+
+	.activity-title-light{
+		color:#666;
+	}
+
+	.activity-card{
+		background:#ffffff;
+		border:1px solid rgba(0,0,0,0.08);
+	}
+
+
+	.activity-card-follow{
+		background:#fff8e6;
+		border:1px solid rgba(255,180,0,0.4);
+	}
+
+	.activity-icon{
+		background:#f3f3f3;
+		border:1px solid rgba(0,0,0,0.08);
+		color:#000;
+	}
+
+	.activity-text{
+		color:#111;
+	}
+
+	.activity-caption{
+		color:#666;
+	}
+
+	.activity-time{
+		color:#888;
+	}
+
+	.activity-delete{
+		color:#666;
+	}
+
+
+	.activity-empty{
+		color:#666;
+	}
+
+	.activity-empty-title{
+		color:#111;
+	}
+
+	.activity-empty-desc{
+		color:#777;
+	}
+
+	.activity-card-skeleton{
+		background:linear-gradient(90deg,#eeeeee 25%,#f7f7f7 37%,#eeeeee 63%);
+		background-size:400%;
+		animation:activitySkeleton 1.3s ease infinite;
+		border:1px solid rgba(0,0,0,0.04);
+	}
+
+	.activity-avatar-skeleton{
+		background:linear-gradient(90deg,#eeeeee 25%,#f7f7f7 37%,#eeeeee 63%);
+		background-size:400%;
+		animation:activitySkeleton 1.3s ease infinite;
+	}
+
+	.activity-avatar{
+		border:1px solid rgba(0,0,0,0.1);
+	}
+}

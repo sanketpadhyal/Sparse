@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="theme-color" content="#000000" />
+
+    <meta
+      name="description"
+      content="Sparse - A minimalistic social media platform focused on privacy and simplicity."
+    />
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>Sparse - Minimal Social Media</title>
+
+    <script>
+      const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches
+      document.documentElement.setAttribute("data-theme", prefersLight ? "light" : "dark")
+    </script>
+
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

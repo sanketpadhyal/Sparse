@@ -1,0 +1,274 @@
+.follow-btn{
+flex:1;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+border:none;
+padding:11px;
+border-radius:10px;
+font-size:13px;
+font-weight:600;
+cursor:pointer;
+transition:background .25s ease, transform .25s ease;
+position:relative;
+overflow:hidden;
+}
+
+.follow-btn.follow{
+background:#1877f2;
+color:white;
+}
+
+.follow-btn.following{
+background:#16c784;
+color:white;
+}
+
+.follow-icon{
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:14px;
+pointer-events:none;
+transform:none;
+transition:none;
+}
+
+.follow-icon svg{
+pointer-events:none;
+transform:none;
+transition:none;
+}
+
+.follow-text{
+display:flex;
+align-items:center;
+pointer-events:none;
+}
+
+.message-btn{
+flex:1;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+background:var(--text);
+color:var(--bg);
+border:1px solid var(--text);
+padding:11px;
+border-radius:8px;
+font-size:13px;
+font-weight:600;
+cursor:pointer;
+transition:background .2s ease,border-color .2s ease;
+}
+
+
+.message-btn-icon{
+display:flex;
+align-items:center;
+justify-content:center;
+pointer-events:none;
+}
+
+.message-btn-icon svg{
+pointer-events:none;
+color:inherit;
+transition:none !important;
+transform:none !important;
+}
+
+.message-btn-text{
+display:flex;
+align-items:center;
+pointer-events:none;
+}
+
+@media (hover:none){
+
+}
+
+@media (max-width:480px){
+
+.follow-btn{
+padding:10px;
+font-size:12px;
+border-radius:8px;
+gap:6px;
+}
+
+.follow-icon{
+font-size:13px;
+}
+
+.message-btn{
+padding:10px;
+font-size:12px;
+border-radius:8px;
+}
+
+}
+
+
+
+.skeleton{
+background:linear-gradient(
+90deg,
+rgba(255,255,255,0.05) 25%,
+rgba(255,255,255,0.12) 37%,
+rgba(255,255,255,0.05) 63%
+);
+background-size:400% 100%;
+animation:skeleton 1.4s ease infinite;
+border-radius:8px;
+}
+
+@keyframes skeleton{
+0%{
+background-position:100% 50%;
+}
+100%{
+background-position:0 50%;
+}
+}
+
+.skeleton-avatar{
+width:88px;
+height:88px;
+border-radius:50%;
+background:linear-gradient(
+90deg,
+rgba(255,255,255,0.05) 25%,
+rgba(255,255,255,0.12) 37%,
+rgba(255,255,255,0.05) 63%
+);
+background-size:400% 100%;
+animation:skeleton 1.4s infinite;
+}
+
+.skeleton-line{
+height:12px;
+border-radius:6px;
+background:linear-gradient(
+90deg,
+rgba(255,255,255,0.05) 25%,
+rgba(255,255,255,0.12) 37%,
+rgba(255,255,255,0.05) 63%
+);
+background-size:400% 100%;
+animation:skeleton 1.4s infinite;
+}
+
+.skeleton-button{
+width:120px;
+height:36px;
+border-radius:10px;
+background:linear-gradient(
+90deg,
+rgba(255,255,255,0.05) 25%,
+rgba(255,255,255,0.12) 37%,
+rgba(255,255,255,0.05) 63%
+);
+background-size:400% 100%;
+animation:skeleton 1.4s infinite;
+}
+
+.skeleton-stat{
+width:40px;
+height:16px;
+border-radius:6px;
+background:linear-gradient(
+90deg,
+rgba(255,255,255,0.05) 25%,
+rgba(255,255,255,0.12) 37%,
+rgba(255,255,255,0.05) 63%
+);
+background-size:400% 100%;
+animation:skeleton 1.4s infinite;
+}
+
+
+.posts-locked .post-tile{
+cursor:pointer;
+}
+
+.posts-title{
+margin:18px 0 12px 0;
+font-size:16px;
+font-weight:600;
+}
+
+.posts-login-lock{
+background:rgba(255,255,255,0.02);
+border:1px solid rgba(255,255,255,0.07);
+border-radius:14px;
+padding:40px 20px;
+text-align:center;
+}
+
+.posts-login-lock p{
+margin:0;
+font-size:15px;
+font-weight:600;
+}
+
+.posts-login-lock span{
+display:block;
+margin-top:6px;
+font-size:13px;
+color:#9a9a9a;
+}
+
+.posts-login-lock button{
+margin-top:16px;
+background:#1877f2;
+border:none;
+color:white;
+padding:10px 16px;
+border-radius:8px;
+cursor:pointer;
+font-size:13px;
+font-weight:600;
+}
+
+
+.post-skeleton{
+position:absolute;
+inset:0;
+border-radius:8px;
+background:linear-gradient(
+90deg,
+rgba(255,255,255,0.06) 25%,
+rgba(255,255,255,0.15) 37%,
+rgba(255,255,255,0.06) 63%
+);
+background-size:400% 100%;
+animation:postSkeleton 1.4s infinite;
+}
+
+@keyframes postSkeleton{
+0%{background-position:100% 50%}
+100%{background-position:0 50%}
+}
+
+@media (prefers-color-scheme: light){
+
+	.back-button{
+		background:#ffffff !important;
+		color:#000000 !important;
+	}
+
+	.back-button svg{
+		color:#000000 !important;
+		fill:#000000 !important;
+	}
+
+}
+
+.follow-icon,
+.follow-icon svg{
+animation:none !important;
+transform:none !important;
+transition:none !important;
+}

@@ -1,0 +1,355 @@
+.connections-page{
+width:92%;
+max-width:760px;
+margin:20px auto 100px auto;
+color:white;
+
+animation:connectionsEnter .25s ease forwards;
+opacity:0;
+transform:translateY(6px);
+}
+
+@keyframes connectionsEnter{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+
+.connections-header{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:16px;
+}
+
+.connections-back{
+width:34px;
+height:34px;
+border-radius:8px;
+background:rgba(255,255,255,0.06);
+border:none;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+color:white;
+transition:.15s;
+}
+
+
+.connections-title{
+display:flex;
+flex-direction:column;
+}
+
+.connections-title h2{
+margin:0;
+font-size:20px;
+font-weight:600;
+}
+
+.connections-title p{
+margin:0;
+font-size:12px;
+color:#9c9c9c;
+}
+
+
+
+.connections-list{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:16px;
+padding:6px 0;
+box-shadow:0 4px 14px rgba(0,0,0,0.25);
+display:flex;
+flex-direction:column;
+}
+
+
+
+.connection-item{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:10px 16px;
+transition:.15s ease;
+border-radius:10px;
+}
+
+
+
+
+.connection-left{
+display:flex;
+align-items:center;
+gap:12px;
+cursor:pointer;
+}
+
+
+
+.connection-avatar{
+width:46px;
+height:46px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid rgba(255,255,255,0.15);
+}
+
+
+
+.connection-info{
+display:flex;
+flex-direction:column;
+}
+
+
+
+.connection-name{
+font-size:14px;
+font-weight:600;
+}
+
+
+
+.connection-username{
+font-size:12px;
+color:#9c9c9c;
+}
+
+
+
+.connection-follow{
+background:#1d9bf0;
+color:white;
+border:none;
+padding:7px 14px;
+border-radius:8px;
+font-size:13px;
+font-weight:600;
+cursor:pointer;
+transition:.15s ease;
+}
+
+
+
+
+.connection-follow.following{
+background:rgba(255,255,255,0.08);
+color:white;
+}
+
+
+
+
+.connections-empty{
+padding:30px;
+text-align:center;
+color:#9c9c9c;
+font-size:14px;
+}
+
+
+
+.connections-skeleton{
+padding:12px 16px;
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+
+
+.skeleton{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+
+
+.skeleton-avatar{
+width:46px;
+height:46px;
+border-radius:50%;
+background:#1a1a1a;
+}
+
+
+
+.skeleton-lines{
+display:flex;
+flex-direction:column;
+gap:6px;
+}
+
+
+
+.skeleton-lines div{
+width:120px;
+height:12px;
+background:#1a1a1a;
+border-radius:6px;
+}
+
+.skeleton-lines div:last-child{
+width:90px;
+}
+
+
+
+@media (max-width:480px){
+
+.connections-page{
+margin:16px auto 90px auto;
+}
+
+.connection-avatar{
+width:42px;
+height:42px;
+}
+
+.connection-name{
+font-size:13px;
+}
+
+.connection-username{
+font-size:11px;
+}
+
+.connection-follow{
+padding:6px 12px;
+font-size:12px;
+}
+
+}
+
+.connection-you{
+font-size:13px;
+color:#9c9c9c;
+font-weight:500;
+padding:6px 10px;
+background:rgba(255,255,255,0.05);
+border-radius:8px;
+}
+
+.connection-name{
+display:flex;
+align-items:center;
+gap:6px;
+font-weight:600;
+}
+
+.connection-tick{
+color:#1DA1F2;
+font-size:14px;
+position:relative;
+top:1px;
+}
+
+.connection-remove{
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.15);
+color:white;
+padding:6px 14px;
+border-radius:8px;
+font-size:13px;
+cursor:pointer;
+transition:all .15s ease;
+}
+
+
+
+.no-connections{
+text-align:center;
+color:rgba(255,255,255,0.6);
+font-size:16px;
+margin-top:40px;
+}
+
+ @media (prefers-color-scheme: light){
+
+	.connections-page{
+		color:#111;
+	}
+
+	
+	.connections-back{
+		background:#ffffff;
+		color:#000;
+		border:1px solid rgba(0,0,0,0.08);
+	}
+
+
+	.connections-title p{
+		color:#666;
+	}
+
+	
+	.connections-list{
+		background:#ffffff;
+		border:1px solid rgba(0,0,0,0.08);
+		box-shadow:0 6px 18px rgba(0,0,0,0.06);
+	}
+
+
+	
+	.connection-avatar{
+		border:2px solid #ffffff;
+	}
+
+	
+	.connection-name{
+		color:#111;
+	}
+
+	.connection-username{
+		color:#777;
+	}
+
+	
+	.connection-follow{
+		background:#000;
+		color:#fff;
+	}
+
+
+	.connection-follow.following{
+		background:#f2f2f2;
+		color:#000;
+	}
+
+
+	
+	.connection-remove{
+		background:#ffffff;
+		color:#000;
+		border:1px solid rgba(0,0,0,0.1);
+	}
+
+
+	
+	.connection-you{
+		background:#f2f2f2;
+		color:#000;
+	}
+
+	
+	.no-connections{
+		color:#666;
+	}
+
+	
+	.skeleton-avatar{
+		background:#e5e5e5;
+	}
+
+	.skeleton-lines div{
+		background:#e0e0e0;
+	}
+
+}

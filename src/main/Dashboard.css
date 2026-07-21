@@ -1,0 +1,1023 @@
+.dashboard-page{
+min-height:100vh;
+background:black;
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:20px;
+padding-bottom:90px;
+}
+
+
+.auth-block{
+	height:70vh;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	gap:14px;
+	padding:20px;
+	color:white;
+}
+
+.auth-block h2{
+	font-size:22px;
+	margin:0;
+}
+
+.auth-block p{
+	font-size:14px;
+	color:#9c9c9c;
+	max-width:300px;
+}
+
+.auth-actions{
+	display:flex;
+	gap:10px;
+	flex-wrap:wrap;
+	justify-content:center;
+	margin-top:10px;
+}
+
+.auth-actions button{
+	padding:10px 16px;
+	border-radius:10px;
+	border:none;
+	font-size:13px;
+	cursor:pointer;
+	font-weight:600;
+}
+
+.auth-actions button:nth-child(1){
+	background:#4f6cff;
+	color:white;
+}
+
+.auth-actions button:nth-child(2){
+	background:#9333ea;
+	color:white;
+}
+
+.home-btn{
+	background:#1a1a1a;
+	color:white;
+	border:1px solid rgba(255,255,255,0.1);
+}
+
+@media (prefers-color-scheme: light){
+
+	.auth-block{
+		color:#111;
+	}
+
+	.auth-block p{
+		color:#666;
+	}
+
+	.auth-actions button:nth-child(1){
+		background:#000;
+	}
+
+	.auth-actions button:nth-child(2){
+		background:#000;
+	}
+
+	.home-btn{
+		background:#f5f5f5;
+		color:#000;
+		border:1px solid rgba(0,0,0,0.1);
+	}
+
+}
+
+
+
+
+
+.stories-row{
+width:100%;
+max-width:720px;
+display:flex;
+align-items:center;
+gap:20px;
+overflow-x:auto;
+padding:8px 6px 6px 6px;
+margin-bottom:2px;
+scrollbar-width:none;
+}
+
+.stories-row::-webkit-scrollbar{
+display:none;
+}
+
+.story-item{
+display:flex;
+flex-direction:column;
+align-items:center;
+font-size:13px;
+color:white;
+min-width:80px;
+}
+
+
+
+
+
+.story-avatar{
+position:relative;
+width:78px;
+height:78px;
+border-radius:50%;
+overflow:hidden;
+cursor:pointer;
+flex-shrink:0;
+}
+
+.story-avatar img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:50%;
+}
+
+
+
+
+
+.story-ring{
+padding:2.5px;
+border-radius:50%;
+background:conic-gradient(
+from 0deg,
+#4f6cff,
+#60a5fa,
+#3b82f6,
+#4f6cff
+);
+}
+
+.story-ring img{
+border:3px solid #0f0f0f;
+}
+
+
+
+
+
+.dashboard-divider{
+width:100%;
+max-width:720px;
+height:1px;
+background:rgba(255,255,255,0.08);
+margin:-2px 0 8px 0;
+}
+
+
+
+
+
+.meme-feed{
+width:100%;
+max-width:720px;
+display:flex;
+flex-direction:column;
+gap:28px;
+}
+
+
+
+
+
+.meme-full{
+position:relative;
+background:#0f0f0f;
+border-radius:14px;
+overflow:hidden;
+border:none;
+}
+
+.meme-full img{
+width:100%;
+display:block;
+}
+
+
+
+
+
+.meme-info{
+padding:12px 14px;
+}
+
+.meme-top{
+display:flex;
+justify-content:space-between;
+font-size:12px;
+color:#9aa4ff;
+margin-bottom:6px;
+}
+
+.meme-source,
+.meme-author{
+display:flex;
+align-items:center;
+gap:5px;
+}
+
+.meme-title{
+font-size:14px;
+color:white;
+margin-bottom:8px;
+}
+
+.meme-engagement{
+display:flex;
+align-items:center;
+gap:14px;
+font-size:13px;
+color:#aaa;
+}
+
+.meme-like{
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+
+
+
+
+
+.meme-skeleton,
+.skeleton-avatar,
+.skeleton-line{
+	background:linear-gradient(
+ 		90deg,
+ 		#1a1a1a 25%,
+ 		#2a2a2a 37%,
+ 		#1a1a1a 63%
+ 	);
+	background-size:400% 100%;
+	animation:skeleton 1.2s ease-in-out infinite;
+}
+
+.meme-skeleton{
+ 	width:100%;
+ 	height:420px;
+ 	border-radius:14px;
+}
+
+.meme-skeleton.overlay{
+ 	position:absolute;
+ 	top:0;
+ 	left:0;
+ 	width:100%;
+ 	height:100%;
+ 	z-index:3;
+ 	border-radius:14px;
+ 	display:block;
+}
+
+
+.meme-skeleton,
+.skeleton-avatar{
+ 	border:1px solid rgba(255,255,255,0.04);
+}
+
+.meme-image-container{
+position:relative;
+width:100%;
+min-height:420px;
+max-height:min(78vh, 880px);
+background:#0f0f0f;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+
+.meme-image-backdrop{
+position:absolute;
+inset:-12%;
+width:124%;
+height:124%;
+object-fit:cover;
+filter:blur(34px) saturate(1.15);
+transform:scale(1.08);
+opacity:.72;
+z-index:0;
+}
+
+.meme-image-container::after{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(180deg,rgba(0,0,0,0.1),rgba(0,0,0,0.2)),
+radial-gradient(circle at center,transparent 38%,rgba(0,0,0,0.22) 100%);
+z-index:1;
+pointer-events:none;
+}
+
+.meme-image{
+width:100%;
+height:auto;
+max-height:min(78vh, 880px);
+object-fit:contain;
+display:block;
+position:relative;
+z-index:2;
+opacity:0;
+transition:opacity .25s ease;
+}
+
+.meme-image.loaded{
+opacity:1;
+}
+
+
+
+
+.skeleton-avatar{
+ 	width:78px;
+ 	height:78px;
+ 	border-radius:50%;
+ 	background:linear-gradient(
+ 		90deg,
+ 		#1a1a1a 25%,
+ 		#2a2a2a 37%,
+ 		#1a1a1a 63%
+ 	);
+ 	background-size:400% 100%;
+ 	animation:skeleton 1.2s ease-in-out infinite;
+}
+
+.story-avatar.skeleton-avatar,
+.story-avatar.story-ring.skeleton-avatar{
+	border:none !important;
+	background:linear-gradient(
+		90deg,
+		#181818 20%,
+		#262626 50%,
+		#181818 80%
+	) !important;
+	box-shadow:
+		inset 0 0 0 1px rgba(255,255,255,0.05),
+		0 8px 18px rgba(0,0,0,0.16);
+	padding:0 !important;
+}
+
+
+
+
+
+.skeleton-line{
+ 	height:14px;
+ 	background:linear-gradient(
+ 		90deg,
+ 		#1a1a1a 25%,
+ 		#2a2a2a 37%,
+ 		#1a1a1a 63%
+ 	);
+ 	background-size:400% 100%;
+ 	animation:skeleton 1.2s ease-in-out infinite;
+ 	border-radius:6px;
+}
+
+
+
+
+
+@keyframes skeleton{
+	0%{
+		background-position:100% 0;
+	}
+	100%{
+		background-position:-100% 0;
+	}
+}
+
+
+
+
+
+.bottom-dashboard-nav{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+height:64px;
+display:flex;
+align-items:center;
+justify-content:space-around;
+background:rgba(0,0,0,0.95);
+border-top:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+z-index:1000;
+padding-bottom:env(safe-area-inset-bottom);
+}
+
+.bottom-dashboard-nav button{
+background:none;
+border:none;
+color:#8a8a8a;
+font-size:22px;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+transition:.25s;
+}
+
+
+
+
+
+
+
+@media (max-width:600px){
+
+.dashboard-page{
+padding:16px;
+padding-top:8px;
+margin-top:-8px;
+}
+
+.stories-row{
+display:none;
+}
+
+.story-item{
+min-width:64px;
+}
+
+.story-avatar{
+width:58px;
+height:58px;
+}
+
+.skeleton-avatar{
+width:58px;
+height:58px;
+}
+
+.story-ring{
+padding:2px;
+}
+
+.story-ring img{
+border-width:2px;
+}
+
+.story-item p{
+max-width:62px;
+font-size:11px;
+margin-top:6px;
+}
+
+.meme-image-container{
+min-height:240px;
+max-height:68vh;
+}
+
+.meme-image{
+max-height:68vh;
+}
+
+}
+
+
+
+
+
+@media (min-width:768px){
+
+.bottom-dashboard-nav{
+display:none;
+}
+
+.stories-row{
+max-width:900px;
+}
+
+.story-avatar{
+width:84px;
+height:84px;
+}
+
+.meme-feed{
+max-width:560px;
+}
+
+.meme-image{
+max-height:520px;
+object-fit:contain;
+}
+
+}
+
+.memes-title{
+width:100%;
+max-width:720px;
+margin:6px 0 10px 0;
+font-size:28px;
+display:flex;
+align-items:center;
+color:white;
+}
+
+.memes-title-main{
+font-weight:900;
+font-size:32px;
+margin-right:2px;
+}
+
+.memes-title-rest{
+font-weight:400;
+opacity:.9;
+}
+
+.memes-timer{
+margin-left:auto;
+font-size:14px;
+color:#aaa;
+position:relative;
+top:4px;
+display:flex;
+align-items:center;
+}
+
+.memes-minutes{
+font-weight:800;
+font-size:16px;
+color:white;
+margin-right:3px;
+}
+
+.memes-minutes-label{
+font-weight:400;
+}
+
+.memes-limit-box{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:60px 20px;
+color:white;
+opacity:.9;
+}
+
+.limit-icon{
+margin-bottom:12px;
+opacity:.8;
+}
+
+.memes-limit-box h3{
+font-size:20px;
+margin-bottom:6px;
+}
+
+.memes-limit-box p{
+font-size:14px;
+color:#aaa;
+}
+
+.double-like-animation{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:#ff214f;
+filter:
+drop-shadow(0 0 14px rgba(255,33,79,0.5))
+drop-shadow(0 10px 28px rgba(0,0,0,0.28));
+animation:heartPop .82s cubic-bezier(.2,.9,.2,1) forwards;
+pointer-events:none;
+z-index:4;
+}
+
+.double-like-animation svg{
+display:block;
+}
+
+@keyframes heartPop{
+0%{transform:translate(-50%,-50%) scale(.22);opacity:0}
+18%{transform:translate(-50%,-50%) scale(1.22);opacity:1}
+32%{transform:translate(-50%,-50%) scale(.96);opacity:1}
+52%{transform:translate(-50%,-50%) scale(1.08);opacity:1}
+100%{transform:translate(-50%,-50%) scale(1);opacity:0}
+}
+
+.double-unlike-animation{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+animation:heartBreak .6s ease forwards;
+pointer-events:none;
+font-size:110px;
+}
+
+@keyframes heartBreak{
+0%{opacity:0;transform:translate(-50%,-50%) scale(.3)}
+40%{opacity:1;transform:translate(-50%,-50%) scale(1.2)}
+100%{opacity:0;transform:translate(-50%,-50%) scale(.9)}
+}
+
+.meme-image-container{
+position:relative;
+width:100%;
+min-height:420px;
+background:#0f0f0f;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+
+.meme-image{
+width:100%;
+height:auto;
+max-height:min(78vh, 880px);
+object-fit:contain;
+display:block;
+}
+
+.stories-row{
+display:flex;
+gap:18px;
+overflow-x:auto;
+padding:14px 8px 10px;
+scrollbar-width:none;
+}
+
+.stories-row::-webkit-scrollbar{
+display:none;
+}
+
+.story-item{
+display:flex;
+flex-direction:column;
+align-items:center;
+min-width:82px;
+cursor:pointer;
+}
+
+.story-avatar{
+position:relative;
+width:74px;
+height:74px;
+border-radius:50%;
+overflow:hidden;
+border:2px solid rgba(255,255,255,0.08);
+background:#0d0d0d;
+box-shadow:
+0 10px 24px rgba(0,0,0,0.22),
+inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.story-avatar img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:50%;
+display:block;
+}
+
+.story-ring{
+padding:3px;
+border-radius:50%;
+background:conic-gradient(
+from 210deg,
+#feda75,
+#fa7e1e,
+#d62976,
+#962fbf,
+#4f5bd5,
+#feda75
+);
+box-shadow:0 10px 24px rgba(0,0,0,0.22);
+}
+
+.story-ring img{
+border:3px solid #050505;
+}
+
+.story-item p{
+max-width:78px;
+font-size:12px;
+margin-top:8px;
+color:#f2f2f2;
+font-weight:500;
+text-align:center;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+
+.no-more-posts{
+width:100%;
+max-width:720px;
+text-align:center;
+color:#8a8a8a;
+font-size:14px;
+margin-top:28px;
+padding:22px 0;
+position:relative;
+letter-spacing:.3px;
+}
+
+.no-more-posts::before,
+.no-more-posts::after{
+content:"";
+position:absolute;
+top:50%;
+width:30%;
+height:1px;
+background:rgba(255,255,255,0.08);
+}
+
+.no-more-posts::before{
+left:0;
+}
+
+.no-more-posts::after{
+right:0;
+}
+
+.no-more-posts span{
+background:black;
+padding:0 12px;
+position:relative;
+z-index:2;
+}
+
+@media (prefers-color-scheme: light){
+
+	.dashboard-page{
+		background:#ffffff;
+	}
+
+	.story-item{
+		color:#000;
+	}
+
+	.story-avatar{
+		border:2px solid rgba(0,0,0,0.06);
+	}
+
+	.story-ring{
+		background:conic-gradient(
+			from 210deg,
+			#feda75,
+			#fa7e1e,
+			#d62976,
+			#962fbf,
+			#4f5bd5,
+			#feda75
+		);
+	}
+
+	.story-ring img{
+		border:3px solid #ffffff !important;
+	}
+
+	
+	.story-avatar{
+		border:2px solid rgba(0,0,0,0.08) !important;
+		background:#ffffff !important;
+		box-shadow:none !important;
+	}
+
+	.story-ring{
+		box-shadow:none !important;
+	}
+
+	.dashboard-divider{
+		background:rgba(0,0,0,0.08);
+	}
+
+	.memes-title{
+		color:#000;
+	}
+
+	.memes-minutes{
+		color:#000;
+	}
+
+	.memes-timer{
+		color:#666;
+	}
+
+	.meme-full{
+		background:#ffffff;
+	}
+
+	.meme-image-container{
+		background:#f5f5f5;
+	}
+
+	.meme-image-container::after{
+		background:
+		linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.12)),
+		radial-gradient(circle at center,transparent 40%,rgba(255,255,255,0.18) 100%);
+	}
+
+	.meme-top{
+		color:#5a67ff;
+	}
+
+	.meme-title{
+		color:#111;
+	}
+
+	.meme-engagement{
+		color:#666;
+	}
+
+	.meme-like{
+		color:#000;
+	}
+
+	
+
+	.meme-skeleton,
+	.skeleton-avatar,
+	.skeleton-line{
+		position:relative;
+		overflow:hidden;
+		background:linear-gradient(
+			100deg,
+			#eaeaea 20%,
+			#ffffff 40%,
+			#f0f0f0 60%,
+			#eaeaea 80%
+		);
+		background-size:200% 100%;
+		animation:skeleton 1.4s ease-in-out infinite;
+		filter:blur(0.2px);
+	}
+
+	
+	.meme-skeleton::after,
+	.skeleton-avatar::after,
+	.skeleton-line::after{
+		content:"";
+		position:absolute;
+		inset:0;
+		background:linear-gradient(
+			120deg,
+			transparent 30%,
+			rgba(255,255,255,0.9) 50%,
+			transparent 70%
+		);
+		animation:shine 1.6s infinite;
+	}
+
+	
+
+	.skeleton-avatar{
+		background:linear-gradient(
+			120deg,
+			#e0e0e0 20%,
+			#ffffff 50%,
+			#eaeaea 80%
+		) !important;
+		box-shadow:0 0 0 1px rgba(0,0,0,0.05) inset;
+	}
+
+	.story-avatar.skeleton-avatar,
+	.story-avatar.story-ring.skeleton-avatar{
+		border:none !important;
+		background:linear-gradient(
+			120deg,
+			#e6e6e6 20%,
+			#ffffff 50%,
+			#ececec 80%
+		) !important;
+		box-shadow:
+			inset 0 0 0 1px rgba(0,0,0,0.06),
+			0 8px 18px rgba(15,23,42,0.08);
+		padding:0 !important;
+	}
+
+	
+	.skeleton-line{
+		background:linear-gradient(
+			120deg,
+			#cfcfcf 20%,
+			#ffffff 50%,
+			#dcdcdc 80%
+		);
+		height:12px;
+		border-radius:8px;
+	}
+
+	
+	.skeleton-avatar::after,
+	.skeleton-line::after{
+		content:"";
+		position:absolute;
+		inset:0;
+		background:linear-gradient(
+			120deg,
+			transparent 30%,
+			rgba(255,255,255,0.9) 50%,
+			transparent 70%
+		);
+		animation:shine 1.6s infinite;
+	}
+
+	
+	@keyframes skeleton{
+		0%{
+			background-position:200% 0;
+		}
+		100%{
+			background-position:-200% 0;
+		}
+	}
+
+	@keyframes shine{
+		0%{
+			transform:translateX(-100%);
+		}
+		100%{
+			transform:translateX(100%);
+		}
+	}
+
+	.meme-skeleton.overlay{
+		background:linear-gradient(
+			90deg,
+			#e6e6e6 25%,
+			#f5f5f5 37%,
+			#e6e6e6 63%
+		);
+	}
+
+	
+	.meme-skeleton,
+	.skeleton-avatar{
+		border:1px solid rgba(0,0,0,0.04);
+	}
+
+	
+
+	.memes-limit-box{
+		color:#111;
+	}
+
+	.memes-limit-box p{
+		color:#666;
+	}
+
+	
+
+	.bottom-dashboard-nav{
+		background:rgba(255,255,255,0.95);
+		border-top:1px solid rgba(0,0,0,0.08);
+	}
+
+	.bottom-dashboard-nav button{
+		color:#777;
+	}
+
+
+	
+
+	.no-more-posts{
+		color:#777;
+	}
+
+	.no-more-posts::before,
+	.no-more-posts::after{
+		background:rgba(0,0,0,0.08);
+	}
+
+	.no-more-posts span{
+		background:#ffffff;
+		color:#888;
+	}
+}
+
+
+
+@media (prefers-color-scheme: light){
+
+	.story-item p{
+		color:#090909 !important;
+		font-weight:500;
+	}
+
+	.story-item:first-child p{
+		font-weight:600;
+		color:#000000 !important;
+	}
+
+}
