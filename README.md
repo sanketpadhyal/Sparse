@@ -1,421 +1,249 @@
-# SPARSE
+<p align="center">
+  <img src="src/assets/readmelogoo.png" alt="Sparse logo" width="96" />
+</p>
 
-<a href="https://www.sparse.in">
- <img src="./logo.png" alt="SPARSE LOGO" width="55" />
-</a>
+<h1 align="center">Sparse Web Platform</h1>
 
----
+<p align="center">
+  A modern, high-performance real-time social web application built for instant communication, social feeds, story sharing, dynamic role security, and AI interaction — built on a pure serverless architecture powered by Firebase Security Rules and Supabase Realtime.
+</p>
 
-> ✅ **Status:** Stable Production Version  
-> Sparse is now running smoothly with optimized performance and core systems fully stable.  
-> 🚧 Continuous improvements and new features are actively in development.
+<p align="center">
+  <a href="https://www.sparse.in">Website</a>
+  |
+  <a href="https://www.sparse.in/dashboard">Dashboard</a>
+  |
+  <a href="https://github.com/sanketpadhyal/Sparse-Website-Code">GitHub Repository</a>
+</p>
 
-> [!NOTE]
-> Sparse Users Try Mimi Project Which is Pinned.
+<p align="center">
+  <a href="https://www.sparse.in">
+    <img src="https://img.shields.io/badge/Live_Website-sparse.in-00C853?style=for-the-badge&logo=netlify&logoColor=white" alt="Live website" />
+  </a>
+  <a href="https://github.com/sanketpadhyal/Sparse-Website-Code/stargazers">
+    <img src="https://img.shields.io/github/stars/sanketpadhyal/Sparse-Website-Code?style=for-the-badge&color=FFD700&logo=github" alt="GitHub Stars" />
+  </a>
+  <a href="https://github.com/sanketpadhyal/Sparse-Website-Code">
+    <img src="https://img.shields.io/badge/Architecture-Serverless_Firebase_Rules-111827?style=for-the-badge&logo=firebase&logoColor=FFCA28" alt="Serverless Architecture" />
+  </a>
+  <a href="https://github.com/sanketpadhyal/Sparse-Website-Code/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License" />
+  </a>
+</p>
 
----
+## Overview
 
-Sparse is a modern real-time social platform built for **fast communication, social discovery, and a seamless mobile experience**.
+Sparse is an open-source, full-featured web platform engineered for ultra-fast communication, social feed discovery, story updates, and AI assistance. Designed with a mobile-first philosophy, it brings together real-time chatrooms, group messaging, 24-hour image/video stories, meme feeds, and AI caption generators into a single fluid application.
 
-It combines messaging, stories, posts, discovery systems, and AI into a **lightweight and highly optimized web application**.
+The entire frontend is optimized for zero-overhead static deployment.
 
-📱 Mobile-first design  
-⚡ Performance-focused architecture  
-🚀 Real-time interactions  
-
----
-
-## 🌐 Live Website
-
-Visit the platform:  
-https://www.sparse.in  
-
-Connect with me: **@sanket**
-
----
-
-# 📊 Activity & Engagement System
-
-Sparse includes a **real-time activity tracking system** that keeps users updated with everything happening around them.
-
-### Features
-
-* 🔐 Login activity tracking  
-* 👥 Followers updates  
-* 🔁 Following activity  
-* 📝 Post updates feed  
-* ❤️ Likes & comments tracking  
-
-### Highlights
-
-* Real-time sync  
-* Instant updates  
-* Optimized loading  
+> [!IMPORTANT]
+> **Serverless Architecture (No Custom Backend Server)**
+> This web application **does NOT require or use an individual Node.js/Express backend server**.
+> All authentication, database queries, real-time listeners, user permissions, and media uploads are handled directly client-to-cloud and secured using **Firebase Firestore Security Rules** and **Supabase Row Level Security (RLS)**.
+> This makes hosting effortless on static cloud edge platforms like Netlify, Vercel, GitHub Pages, or Firebase Hosting without server management cost or downtime.
 
 ---
 
-# 🔔 Notifications System
+## Architecture & Security Model
 
-A smart real-time notification system for:
+```
+                    ┌─────────────────────────────────────────┐
+                    │          React Frontend Client          │
+                    │         (SPA / React Router 7)          │
+                    └───────────────────┬─────────────────────┘
+                                        │
+             ┌──────────────────────────┴──────────────────────────┐
+             ▼                                                     ▼
+┌──────────────────────────┐                             ┌──────────────────────────┐
+│     Firebase Cloud       │                             │     Supabase Cloud       │
+├──────────────────────────┤                             ├──────────────────────────┤
+│ - Authentication         │                             │ - Realtime WebSocket     │
+│ - Firestore Database     │                             │ - Chat Message Logs      │
+│ - Storage (Media)        │                             │ - Push Subscriptions     │
+│ - Firestore Security     │                             │ - Storage Buckets        │
+│   Rules (Access Control) │                             │ - Row Level Security     │
+└──────────────────────────┘                             └──────────────────────────┘
+```
 
-* Chats (messages, replies, reactions)  
-* Stories (interactions, replies)  
-* Posts (likes, comments)  
-* Profile updates  
-
-### 🔐 Security Layer
-
-Notifications work only on the **last logged-in device**, ensuring:
-
-* safer account monitoring  
-* reduced suspicious activity  
-* controlled notification flow  
-
----
-
-# 🔐 Account System
-
-Complete authentication and user control system:
-
-* Secure login/signup  
-* Username-based identity  
-* Profile editing  
-* Password management  
-* Account deletion  
-
-### Deletion Includes
-
-* profile data  
-* posts  
-* stories  
-* likes & comments  
-* followers  
+Because there is **no custom server-side Node process**, security and authorization are strictly enforced by database rules:
+- **User Privacy & Role Integrity**: Users cannot tamper with role assignments (`owner`, `friend`, `pookie`, `verified`) via console injection or client code because Firebase Security Rules restrict write operations to authorized UIDs.
+- **Direct Real-time Sync**: Chat channels and story feeds subscribe directly to Firebase/Supabase WebSocket streams for instant ~1s update latency.
 
 ---
 
-# 👤 User Profiles
+## Product Surfaces
 
-Each profile includes:
-
-* profile photo  
-* username & name  
-* bio & status  
-* gender & birthday  
-* followers/following  
-
-### Roles
-
-* Owner 👑  
-* Friend 💎  
-* Pookie 🎀  
-* Verified ✔️  
+| Surface | URL / Location |
+| --- | --- |
+| Live Website | [www.sparse.in](https://www.sparse.in) |
+| Dashboard | [www.sparse.in/dashboard](https://www.sparse.in/dashboard) |
+| Source Repository | [sanketpadhyal/Sparse-Website-Code](https://github.com/sanketpadhyal/Sparse-Website-Code) |
 
 ---
 
-# 🛡️ Role Security System (NEW 🔥)
+## Key Features
 
-Sparse now includes a **highly secure role management system**:
+### 💬 Real-Time Messaging & Group Chat
+- Instant 1-on-1 messaging with read receipts, typing indicators, and emoji reactions.
+- Group chat support with admin controls, member invitations, and group info panels.
+- Photo sharing, reply threads, swipe-to-reply gestures, and message deletion.
 
-* ❌ Users cannot assign roles themselves  
-* ❌ No API / console injection possible  
-* ❌ No one can become owner via frontend  
-* ❌ Owners are fully protected (immutable)  
+### 📖 24-Hour Story System
+- Story viewer supporting both images and short videos (up to 30s playback).
+- Story ring UI with instant progress indicators.
+- Stories archive to view and re-upload expired story memories.
 
-### Owner Permissions
+### 📸 Post Feed & Social Discovery
+- Media post feed with double-tap likes, comment threads, and detailed interaction modal.
+- Username-based search, mutual connection discovery, and profile relationship tags.
+- Integrated **Odoy AI** caption generator during post creation for automated caption writing.
 
-* Can assign roles: `friend`, `pookie`, `verified`  
-* Can remove roles  
-* Cannot:
-  * create new owners  
-  * modify existing owners  
+### 🛡️ Role Security System (Firestore Rules)
+- Role badges: `Owner 👑`, `Friend 💎`, `Pookie 🎀`, `Verified ✔️`.
+- Dedicated **Owner Panel** interface for search and role assignment.
+- Rules-level protection preventing user self-elevation or console tampering.
 
-> 🔒 Protected at database level (Firestore rules)
-
----
-
-# 📸 Posts System
-
-Users can:
-
-* create posts  
-* like posts  
-* comment  
-* view interactions  
-* open detailed post view  
-
-Fully real-time and optimized.
+### 🌗 Dark & Light Theme System
+- Complete dark and light UI modes with auto-sync based on system preference.
+- Custom CSS variable design system ensuring smooth transitions across screens.
 
 ---
 
-# 💬 Real-Time Chat
+## Project Structure
 
-* instant messaging  
-* reply system  
-* reactions  
-* typing indicators  
-* seen/delivered status  
-* chat deletion  
-
----
-
-# 🖼 Chat Media
-
-* image sharing  
-* lazy loading  
-* skeleton loaders  
-* optimized rendering  
-
----
-
-# 👥 Social System
-
-* follow/unfollow  
-* mutual detection  
-* profile discovery  
-* public profiles  
+| Directory | Description |
+| --- | --- |
+| `src/` | Main React application source directory |
+| `src/auth/` | Authentication components (Login, Signup, Recover, Email Verification, Session Devices) |
+| `src/components/` | Reusable UI components (Navbar, BottomNav, Footer, Toast, Photo Cropper) |
+| `src/GroupChat/` | Group chat modules (Create Group, Group Chat Room, Group Info) |
+| `src/hook/` | Custom React hooks (Session Guard, Message Listener, Firestore Guard, Network speed hook) |
+| `src/loading-page/` | App loading screens and skeleton loaders |
+| `src/main/` | Core views (Dashboard, ChatRoom, Chats list, Edit Profile, User Search, Odoy AI) |
+| `src/main/preview-pages/` | Modal previews (User Profile, Story Preview, Connections) |
+| `src/main/story/` | Story creation and editor tools (Add Story, Story Canvas Editor) |
+| `src/pages/` | Static information pages (Hero landing, Developers, Journey timeline, Owner Panel, Profile QR) |
+| `src/post/` | Post feed components (Add Post, Post View, Posts Feed grid, Select Post) |
+| `src/settings/` | User account settings (Account Center, Security, Data & Privacy, Insights, Liked Memes) |
+| `supabase/` | Supabase configuration and Edge Functions (`send-push`) |
 
 ---
 
-# 📖 Story System
+## Main Files
 
-* 24-hour stories  
-* story viewer  
-* image stories  
-* Firebase storage  
-* story ring UI  
-
-### 🔥 NEW UPDATES
-
-* 🎥 Short video support (up to 30 seconds)  
-* 🎨 Story templates fixed  
-* ⚡ Faster loading & smooth playback  
-
----
-
-# 🎛 Owner Panel (NEW 🔥)
-
-A dedicated **Owner Control Panel** added:
-
-* 🔍 Search any user  
-* 🎭 Assign/remove roles  
-* 👥 View users by roles  
-* 🔐 Protected actions (no owner creation)  
-
-Built for **secure platform control**.
+| File | Purpose |
+| --- | --- |
+| `src/App.js` | Primary App shell, route navigation registry, and theme context wrapper |
+| `src/firebase.js` | Initializer for Firebase App, Auth, Firestore, and Storage |
+| `src/supabase.js` | Initializer for Supabase Realtime client and Push Notification helper |
+| `src/supabaseGroup.js` | Secondary Supabase instance for group communication channels |
+| `src/main/Dashboard.jsx` | Main social feed, story reel, meme feed, and activity dashboard |
+| `src/main/ChatRoom.jsx` | 1-on-1 real-time WebSocket chat room |
+| `src/GroupChat/GroupChatRoom.jsx` | Group conversation room with real-time payload syncing |
+| `src/pages/OwnerPanel.js` | Protected owner dashboard for user verification and role assignment |
 
 ---
 
-# 🔎 Discovery
+## Tech Stack
 
-* fast username search  
-* mutual suggestions  
-* relationship-based discovery  
-
----
-
-# 🤖 AI Assistant
-
-**Odoy AI** integrated inside chat.
-
-* natural conversation  
-* fast responses  
-* Google Cloud backend  
+| Layer | Technology |
+| --- | --- |
+| Frontend Framework | React 19, React Router 7 |
+| Build Tool | Create React App / Webpack |
+| Realtime Database | Supabase (PostgreSQL & Realtime Channels) |
+| Core DB & Auth | Firebase Auth & Cloud Firestore |
+| Storage | Firebase Storage & Supabase Storage |
+| AI Integration | Odoy AI Assistant |
+| Icons & Animation | React Icons, Lucide React, Lenis Smooth Scroll |
+| Styling | Custom Vanilla CSS (Design system tokens) |
 
 ---
 
-# 😂 Meme Feed
+## Environment Variables & Configuration
 
-* infinite scroll  
-* safe filtering  
-* duplicate prevention  
-* interaction tracking  
-* double-tap like  
+To run Sparse locally or deploy your own instance, create a `.env` file in the root workspace using the `.env.example` template:
 
----
+```env
+# Firebase Configuration
+REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_project.firebasestorage.app
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=1234567890
+REACT_APP_FIREBASE_APP_ID=1:1234567890:web:abcdef123456
+REACT_APP_FIREBASE_MEASUREMENT_ID=G-XXXXXXXXXX
 
-# ⏱️ Daily Usage Limit
+# Supabase Configuration
+REACT_APP_SUPABASE_URL=https://your-supabase-project.supabase.co
+REACT_APP_SUPABASE_ANON_KEY=your_supabase_anon_key
+REACT_APP_PUSH_FUNCTION_URL=https://your-supabase-project.functions.supabase.co/functions/v1/send-push
 
-* meme usage capped at **1 hour/day**  
-* auto reset system  
-* performance protection  
+# Group Chat Supabase Instance (Optional)
+REACT_APP_SUPABASE_GROUP_URL=https://your-group-supabase-project.supabase.co
+REACT_APP_SUPABASE_GROUP_ANON_KEY=your_group_supabase_anon_key
 
----
-
-# 🌗 Theme System (NEW 🔥)
-
-* Full **dark + light mode support**  
-* Auto-sync with device theme  
-* Smooth UI transitions  
-
----
-
-# ⚡ Performance Optimization
-
-### Database
-
-* pagination  
-* query limits  
-* reduced redundancy  
-
-### UI
-
-* lazy loading  
-* skeleton states  
-* smooth scrolling  
-
-### Caching
-
-* session storage  
-* local storage  
-* memory cache  
+# AI Endpoint (Optional)
+REACT_APP_ODOY_AI_URL=https://your-ai-service.run.app/ai
+```
 
 ---
 
-# 🛠 Tech Stack
+## Getting Started
 
-### Frontend
+### 1. Prerequisites
+- Node.js (v18 or higher)
+- npm, yarn, or pnpm
+- Firebase Project
+- Supabase Project
 
-* React  
-* React Router  
-* Custom CSS  
-* React Icons  
+### 2. Installation
+Clone the repository and install project dependencies:
 
-### Backend
+```bash
+git clone https://github.com/sanketpadhyal/Sparse-Website-Code.git
+cd Sparse-Website-Code
+npm install
+```
 
-* Supabase (Realtime)  
-* Firebase  
+### 3. Setup Environment Variables
+Copy `.env.example` to `.env` and fill in your Firebase and Supabase project credentials:
 
-### Database
+```bash
+cp .env.example .env
+```
 
-* PostgreSQL  
-* Firestore  
+### 4. Start Development Server
+Run the local development server:
 
-### AI
+```bash
+npm start
+```
 
-* Odoy AI (Google Cloud)  
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
----
+### 5. Build for Production
+To generate an optimized production bundle:
 
-# 🚀 Architecture
-
-Hybrid system:
-
-### Supabase
-
-* chat system  
-* realtime updates  
-
-### Firebase
-
-* users  
-* posts  
-* stories  
-* authentication  
-
----
-
-# 🌍 Open Source
-
-Sparse will be open sourced in future.
+```bash
+npm run build
+```
 
 ---
 
-# 👨‍💻 Developers
+## Developers & Authors
 
-**Sanket Padhyal**  
-GitHub: @sanketpadhyal  
-Sparse: @sanket  
-
-**Bhavesh Patil**  
-GitHub: @bhaveshpatil4251-wq  
-Sparse: @kaii  
+- **Sanket Padhyal** - *Creator & Lead Developer* - [@sanketpadhyal](https://github.com/sanketpadhyal)
+- **Bhavesh Patil** - *Developer* - [@bhaveshpatil4251-wq](https://github.com/bhaveshpatil4251-wq)
 
 ---
 
-# ☁️ Release Updates
+## License
 
-Sparse started as a simple idea and quickly evolved into a fully working real-time social platform.
-
-### 🚀 Timeline
-
-* **📅 6 March 2026**
-
-  1. Sparse repository created
-
-* **📅 13 March 2026**
-
-  1. First prototype launched
-
-* **📅 14 March 2026**
-
-  1. Initial public release
-  2. 🎉 Gained first **40+ users**
-
-* **📅 16 March 2026**
-
-  1. Major bug fixes & feature improvements
-  2. Core system stabilized
-
-* **📅 18 March 2026**
-
-  1. ✅ Sparse Stable Version released
-
-* **📅 24 March 2026**
-
-  1. 🔔 Notifications bug fixed
-  2. 🎥 Stories support short videos (up to 30 seconds)
-  3. 🎨 Story templates fixed
-  4. 🌗 Full light/dark theme system added
-  5. 🎛 Owner Panel system introduced
-  6. 🔐 Role security system implemented
-
-* **📅 25 March 2026**
-
-  1. 🤖 Added **Odoy AI caption generator** in post creation (ultra-fast ~1s latency)
-  2. 🧠 Integrated AI bio generator in **Edit Profile**
-  3. 📂 Introduced **Stories Archive** (view & re-upload expired stories)
-  4. ⚡ Performance improvements and minor bug fixes (web optimized)
-
-* **📅 26 March 2026 (NEW 🔥)**
-
-  1. 💬 Fixed chatroom bugs and improved overall message stability  
-  2. ⚡ Chats page is now dynamic with live typing indicators and unread count updates  
-  3. 🧩 Profile page skeleton loading bug fixed  
-  4. ✏️ Edit profile optimized — faster and smoother saving experience  
-  5. 🚀 Follow system significantly improved (from ~8s → ~1s response time)
+This project is licensed under the **MIT License** - feel free to fork, modify, and build upon it!
 
 ---
 
-
-### 🔥 Current State
-
-Sparse is now:
-
-* almost bug-free  
-* actively used by real users  
-* production-ready  
-* secured at database level  
-
----
-
-### 🚧 What’s Next
-
-Upcoming improvements include:
-
-* ⚡ deeper performance optimizations  
-* 🤖 smarter AI interactions  
-* 📊 analytics dashboard  
-* 🛠 advanced moderation tools  
-
----
-
-We are building Sparse step-by-step —  
-from a small idea to a powerful real-time social ecosystem.
-
-More updates coming soon.
-
----
-
-# 📅 Project Info
-
-Created: 2026  
+<p align="center">
+  <b>⭐ If you like this project, consider giving it a star on GitHub! ⭐</b>
+</p>
