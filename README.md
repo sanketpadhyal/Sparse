@@ -43,10 +43,6 @@ The entire frontend is optimized for zero-overhead static deployment.
 > All authentication, database queries, real-time listeners, user permissions, and media uploads are handled directly client-to-cloud and secured using **Firebase Firestore Security Rules** and **Supabase Row Level Security (RLS)**.
 > This makes hosting effortless on static cloud edge platforms like Netlify, Vercel, GitHub Pages, or Firebase Hosting without server management cost or downtime.
 
-> [!TIP]
-> **Support Open Source & Star The Repo ⭐**
-> If you find this codebase useful, please give this repository a **Star on GitHub**! Your support helps expand open-source development and new features.
-
 ---
 
 ## Architecture & Security Model
